@@ -2,6 +2,7 @@ var express = require('express');
 var generatePDF = require('./pdf/export');
 
 var app = express();
+app.set('port', process.env.PORT || 4005);
 
 app.get('/export', function (req, res) {
   console.log('generating pdf with params :', req.query);
@@ -20,5 +21,5 @@ app.get('/export', function (req, res) {
     });
 });
 
-app.listen(4005);
-console.log('listening on port: ' + 4005);
+app.listen(app.get('port'));
+console.log('listening on port: ' + app.get('port'));
