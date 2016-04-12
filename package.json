@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "model-producer",
+  "name": "html2pdf",
   "version": "1.0.0",
   "description": "export in pdf",
   "main": "index.js",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PredicSis/model-producer.git"
+    "url": "git+https://github.com/PredicSis/html2pdf.git"
   },
   "author": "",
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/PredicSis/model-producer/issues"
+    "url": "https://github.com/PredicSis/html2pdf/issues"
   },
-  "homepage": "https://github.com/PredicSis/model-producer#readme",
+  "homepage": "https://github.com/PredicSis/html2pdf#readme",
   "dependencies": {
     "express": "^4.13.4",
     "phantomjs-prebuilt": "^2.1.7",
