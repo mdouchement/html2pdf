@@ -1,0 +1,28 @@
+{
+  "private": true,
+  "name": "model-producer",
+  "version": "1.0.0",
+  "description": "export in pdf",
+  "main": "index.js",
+  "scripts": {
+    "restart": "npm stop && pm2 start node/index.js -l node_logs",
+    "start": "npm restart",
+    "stop": "pm2 delete all"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PredicSis/model-producer.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/PredicSis/model-producer/issues"
+  },
+  "homepage": "https://github.com/PredicSis/model-producer#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "phantomjs-prebuilt": "^2.1.7",
+    "pm2": "^1.1.1",
+    "tmp": "0.0.28"
+  }
+}
