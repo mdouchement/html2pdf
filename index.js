@@ -13,13 +13,14 @@ app.get('/export', function (req, res) {
     .then(function(stream) {
       res.attachment(req.query.filename);
       stream.pipe(res);
-      console.log('generated pdf with params :', req.query);
+      console.log('generated pdf with params :');
+      console.log(req.query);
     })
     .catch(function(err) {
-      console.log(err);
+      console.error(err);
       res.status(500).json(err);
     });
 });
 
 app.listen(app.get('port'));
-console.log('listening on port: ' + app.get('port'));
+console.info('listening on port: ' + app.get('port'));
