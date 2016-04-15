@@ -5,6 +5,7 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 COPY package.json /usr/src/app/
+RUN apk update && apk add git
 RUN npm install
 COPY . /usr/src/app/
 
