@@ -9,7 +9,7 @@
   },
   "scripts": {
     "restart": "npm stop && pm2 start node index.js -l node_logs",
-    "start": "node index.js -l node_logs",
+    "start": "node index.js",
     "stop": "pm2 delete all"
   },
   "repository": {
