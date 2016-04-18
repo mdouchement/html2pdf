@@ -11,4 +11,4 @@ RUN npm install
 COPY . /usr/src/app/
 
 EXPOSE 4005
-CMD ["npm", "start"]
+CMD ["node", "index.js"]
