@@ -4,7 +4,7 @@ var childProcess = require('child_process');
 var phantomjs = require('phantomjs-prebuilt');
 var tmp = require('tmp');
 
-var binPath = phantomjs.path
+var binPath = phantomjs.path;
 
 module.exports = function(url, filename) {
   filename = filename || 'export.pdf';

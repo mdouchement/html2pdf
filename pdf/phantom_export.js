@@ -25,7 +25,7 @@ page.open(url, function (status) {
       phantom.exit();
     }, 1000);
   } else {
-    console.error('network error');
+    console.error('network error', url);
     phantom.exit(-1);
   }
 });
