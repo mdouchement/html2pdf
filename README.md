@@ -1,18 +1,29 @@
 # html2pdf
 
-Rasterizer based on PhantomJS
-
-## Requirements
-
-```bash
-$ npm install
-```
+PDF screenshot API based on PhantomJS
 
 ##### Node version
-In order to make it works (and handle usage of `Promise`), you must have a node version >= 4.0.0. 
+version >= `4.0.0`
 
 ## Usage
 
 ```bash
-$ PORT=4005 npm start
+$ NODE_ENV=production npm install
+$ NODE_ENV=production PORT=4005 npm start
+```
+
+```
+Open http://localhost:4005/export?url=http://www.google.com&filename=google.pdf
+```
+
+### Usage with SPA
+
+```js
+// on page_load
+window.phantomWaitForCallback = true;
+
+// when you are done fetching your api and rendering the page
+if (typeof window.callPhantom === 'function') {
+ window.callPhantom({ event: 'loaded' });
+}
 ```
