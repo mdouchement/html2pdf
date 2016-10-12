@@ -1,6 +1,8 @@
 FROM mhart/alpine-node:5.10
 MAINTAINER Gregoire MORPAIN <gm@predicsis.com>
 
+ENV NODE_ENV production
+
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
