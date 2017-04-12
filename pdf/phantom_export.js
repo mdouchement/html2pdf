@@ -4,11 +4,13 @@ var args = system.args;
 var page = new WebPage();
 var url  =  args[1];
 var path =  args[2];
+var orientation = args[3] || 'portrait';
+var format = args[4] || 'A4';
 
-// based on https://github.com/ariya/phantomjs/issues/12685
-page.viewportSize = { width: 1238, height: 1763 };
-page.paperSize = {width:'1238px', height:'1763px'};
-page.settings.dpi = 100;
+page.paperSize = {
+  format: format,
+  orientation: orientation
+};
 
 function onReady() {
   setTimeout(function() {

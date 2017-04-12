@@ -9,7 +9,7 @@ app.get('/export', function (req, res) {
   if (!req.query || !req.query.url) {
     return res.status(404).end('missing url param');
   }
-  generatePDF(req.query.url, req.query.filename)
+  generatePDF(req.query.url, req.query.orientation, req.query.format)
     .then(function(stream) {
       res.attachment(req.query.filename);
       stream.pipe(res);

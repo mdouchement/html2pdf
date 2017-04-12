@@ -13,7 +13,7 @@ $ NODE_ENV=production PORT=4005 npm start
 ```
 
 ```
-Open http://localhost:4005/export?url=http://www.google.com&filename=google.pdf
+Open http://localhost:4005/export?url=http://www.google.com&filename=google.pdf&format=A4&orientation=portrait
 ```
 
 ### Usage with SPA
