@@ -7,13 +7,13 @@ var tmp = require('tmp');
 tmp.setGracefulCleanup();
 var binPath = phantomjs.path;
 
-module.exports = function(url) {
+module.exports = function(url, orientation, format) {
   return new Promise(function(res, rej) {
     tmp.file(function _tempFileCreated(err, tmpFile) {
       if (err) {
         return rej(err);
       }
-      var childArgs = [ path.join(__dirname, 'phantom_export.js'), url, tmpFile ];
+      var childArgs = [ path.join(__dirname, 'phantom_export.js'), url, tmpFile, orientation, format ];
       childProcess.execFile(binPath, childArgs, function(err, stdout, stderr) {
         console.log('stdout', stdout);
         console.log('stderr', stderr);
