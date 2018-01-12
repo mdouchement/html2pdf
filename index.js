@@ -46,6 +46,7 @@ async function _generatePDF(url, orientation, format, tmpFile) {
     })
 
     await page.goto(url, {waitUntil: 'networkidle2'})
+    await new Promise(resolve => setTimeout(resolve, 1000)) // wait for CSS animations
 
     // https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#pagepdfoptions
     await page.pdf({
