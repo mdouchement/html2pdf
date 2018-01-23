@@ -23,7 +23,7 @@
   "dependencies": {
     "express": "^4.13.4",
     "pm2": "^1.1.1",
-    "puppeteer": "^0.13.0",
+    "puppeteer": "^1.0.0",
     "tmp": "0.0.28"
   }
 }
