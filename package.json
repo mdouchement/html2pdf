@@ -22,7 +22,7 @@
   "homepage": "https://github.com/PredicSis/html2pdf#readme",
   "dependencies": {
     "express": "^4.13.4",
-    "pm2": "^1.1.1",
+    "pm2": "^5.2.2",
     "puppeteer": "^1.13.0",
     "tmp": "0.0.28"
   }
